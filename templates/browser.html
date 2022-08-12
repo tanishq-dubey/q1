@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Q1</title>
+</head>
+<body>
+    <h1>Q1: A Simple S3 Browser</h1>
+    <h3>Directories</h3>
+    <ul>
+    {% for item in dirs %}
+      <li><a href="/browse/{{bucket}}/{{item}}">{{item}}</a></li>
+    {% endfor %}
+    </ul>
+    <h3>Files</h3>
+    <ul>
+    {% for item in items %}
+      <li>{{item}} -- <a href="/download/{{bucket}}/{{item}}">Download</a></li>
+    {% endfor %}
+    </ul>
+    <a href="../"><b>Back</b></a>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html> 

@@ -1,0 +1,5 @@
+---
+aws:
+  access_key: fake
+  secret_key: fake
+  endpoint_url: http://aws:4566
